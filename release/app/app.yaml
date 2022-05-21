@@ -1,0 +1,11 @@
+apiVersion: core.oam.dev/v1beta1
+kind: Application
+metadata:
+  name: web-demo
+spec:
+  components:
+    - name: web-demo
+      type: webservice
+      properties:
+        image: crccheck/hello-world
+        port: 8000
