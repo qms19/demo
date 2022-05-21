@@ -19,9 +19,9 @@ func main()  {
 		Produces(restful.MIME_JSON)
 
 	service.Route(service.GET("/{user-id}").To(FindUser))
-
-	fmt.Println("start web-demo listen 8080")
-	log.Fatal(http.ListenAndServe(":8080",nil))
+	restful.Add(service)
+	fmt.Println("start web-demo listen 9000")
+	log.Fatal(http.ListenAndServe(":9000",nil))
 }
 
 func FindUser(request *restful.Request, response *restful.Response) {

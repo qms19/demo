@@ -8,11 +8,11 @@ spec:
       type: webservice
       properties:
         image: qms19/web-demo:latest
-        port: 8080
+        port: 9000
       traits:
         - type: nocalhost
           properties:
-            port: 8080
+            port: 9000
             gitUrl: https://github.com/qms19/web-demo.git
             image: go
             sync:
